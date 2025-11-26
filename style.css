@@ -11,6 +11,8 @@ body {
     overflow-x: hidden;
 }
 
+/* ================= CONFIG GENERAL ================= */
+
 .pantalla {
     width: 1440px;
     height: 1024px;
@@ -23,11 +25,10 @@ body {
 /* ================= SECCIÓN 1 ================= */
 
 .seccion1 {
-    background: url("img/fondo.jpg") no-repeat center center/cover;
-    justify-content: flex-start;
+    background: url("fondo.jpg") no-repeat center center/cover;
+    justify-content: center;
     flex-direction: column;
-    padding-left: 50px;
-    padding-top: 150px;
+    text-align: center;
 }
 
 .overlay {
@@ -36,94 +37,130 @@ body {
     background: rgba(0, 0, 0, 0.45);
 }
 
-/* ---- TÍTULO GRANDE Y CENTRADO ---- */
 .titulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-size: 110px;
+    position: relative;
+    font-size: 95px;
     color: #86e3ff;
     font-weight: bold;
-    line-height: 1;
-    text-align: center;
+    line-height: 1.1;
     z-index: 2;
 }
 
-/* ---- INFORMACIÓN INFERIOR ---- */
 .header-info {
     position: absolute;
     bottom: 40px;
-    width: 1440px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     padding: 0 80px;
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
+    font-size: 24px;
     z-index: 2;
 }
 
-/* mover ambas descripciones a la izquierda */
-.header-info span:first-child {
+.nombre {
     transform: translateX(-50px);
 }
 
-.header-info span:last-child {
+.rol {
     transform: translateX(-40px);
 }
 
 /* ================= SECCIÓN 2 ================= */
 
 .seccion2 {
+    background: linear-gradient(#000000, #004d80);
     display: flex;
     align-items: center;
-
-    background: linear-gradient(
-        to bottom,
-        #000000 0%,
-        #000000 50%,
-        #003b55 100%
-    );
 }
 
 .contenedor {
     display: flex;
     width: 80%;
     margin: auto;
-    gap: 50px;
+    gap: 60px;
 }
 
-/* FOTO MÁS GRANDE */
 .perfil {
-    width: 320px;
-    height: 420px;
-    border-radius: 10px;
+    width: 400px;
+    border-radius: 14px;
     object-fit: cover;
 }
 
-/* TÍTULOS SUBRAYADOS */
 .texto h2,
 .texto h3 {
-    text-decoration: underline;
-    text-decoration-color: #86e3ff;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 6px;
+    position: relative;
+    padding-bottom: 6px;
 }
 
-/* TAMAÑO DE TIPOS */
+.texto h2::after,
+.texto h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 3px;
+    background: #86e3ff;
+}
+
 .texto h2 {
-    font-size: 55px;
+    font-size: 48px;
 }
 
 .texto h3 {
-    font-size: 32px;
     margin-top: 30px;
+    font-size: 28px;
 }
 
 .texto p,
-.texto ul {
+.texto ul li {
+    font-size: 22px;
+}
+
+/* ================= SECCIÓN 3 ================= */
+
+.seccion3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    gap: 70px;
+    background: linear-gradient(to bottom, #004d80, #0000);
+}
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.icono {
+    width: 150px;
+    height: auto;
+}
+
+.info h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info p {
     font-size: 24px;
-    line-height: 1.5;
+    margin: 4px 0;
+}
+
+.info a {
+    color: #86e3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+.contacto a {
+    color: #86e3ff;
+    font-weight: bold;
 }
