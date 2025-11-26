@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.pantalla {
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ================= SECCIÓN 1 ================= */
+
+.seccion1 {
+    background: url("img/fondo.jpg") no-repeat center center/cover;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 150px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* ---- TÍTULO GRANDE Y CENTRADO ---- */
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 110px;
+    color: #86e3ff;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    z-index: 2;
+}
+
+/* ---- INFORMACIÓN INFERIOR ---- */
+.header-info {
+    position: absolute;
+    bottom: 40px;
+    width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    z-index: 2;
+}
+
+/* mover ambas descripciones a la izquierda */
+.header-info span:first-child {
+    transform: translateX(-50px);
+}
+
+.header-info span:last-child {
+    transform: translateX(-40px);
+}
+
+/* ================= SECCIÓN 2 ================= */
+
+.seccion2 {
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #000000 50%,
+        #003b55 100%
+    );
+}
+
+.contenedor {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+}
+
+/* FOTO MÁS GRANDE */
+.perfil {
+    width: 320px;
+    height: 420px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* TÍTULOS SUBRAYADOS */
+.texto h2,
+.texto h3 {
+    text-decoration: underline;
+    text-decoration-color: #86e3ff;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+/* TAMAÑO DE TIPOS */
+.texto h2 {
+    font-size: 55px;
+}
+
+.texto h3 {
+    font-size: 32px;
+    margin-top: 30px;
+}
+
+.texto p,
+.texto ul {
+    font-size: 24px;
+    line-height: 1.5;
+}
