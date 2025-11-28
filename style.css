@@ -62,7 +62,7 @@ body {
 }
 
 .header-info .descripcion {
-    transform: translateX(60px);
+    transform: translateX(-40px);
 }
 
 
@@ -80,8 +80,7 @@ body {
 }
 
 .perfil {
-    width: 350px;
-    height: 420px;
+    width: 400px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -135,6 +134,7 @@ body {
     object-fit: contain;
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.35));
     transition: transform 0.25s;
+    transform: translateX(-60px);
 }
 
 .skills-grid img:hover {
