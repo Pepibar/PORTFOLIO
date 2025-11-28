@@ -11,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= CONFIG GENERAL ================= */
 
 .pantalla {
     width: 1440px;
@@ -22,10 +21,9 @@ body {
     overflow: hidden;
 }
 
-/* ================= SECCIÓN 1 ================= */
 
 .seccion1 {
-    background: url("img/fondo.jpg") no-repeat center center/cover;
+    background: url("fondo.avif") no-repeat center center/cover;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -60,17 +58,16 @@ body {
 }
 
 .header-info .nombre {
-    transform: translateX(-120px);
+    transform: translateX(-60px);
 }
 
 .header-info .descripcion {
-    transform: translateX(-80px);
+    transform: translateX(60px);
 }
 
-/* ================= SECCIÓN 2 ================= */
 
 .seccion2 {
-    background: linear-gradient(#004d80, #000000);
+    background: linear-gradient(#000000,#004d80);
     display: flex;
     align-items: center;
 }
@@ -105,79 +102,88 @@ body {
     margin-top: 10px;
 }
 
-/* ================= SECCIÓN 3 (Tecnologías) ================= */
-
 .seccion3 {
     background: #004d80;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;  
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    padding: 40px 0 70px 0;        
+    gap: 40px;
 }
 
 .skills-title {
-    font-size: 50px;
+    font-size: 48px;
     font-weight: bold;
+    color: white;
+    border-bottom: 3px solid #86e3ff;
+    margin-top: 10px;              
+    text-align: center;
 }
 
-.skills-container {
-    display: flex;
-    gap: 60px;
-    align-items: center;
-    justify-content: center;
+.skills-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 200px;                     
+    justify-items: center;
+    margin-top: 200px;   
 }
 
-.skills-container img {
-    width: 120px;
-    height: 120px;
+.skills-grid img {
+    width: 150px;                 
     object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(0,0,0,0.4));
-    transition: transform 0.3s;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.35));
+    transition: transform 0.25s;
 }
 
-.skills-container img:hover {
-    transform: scale(1.15);
+.skills-grid img:hover {
+    transform: scale(1.12);
 }
-
-/* ================= SECCIÓN 4 (Proyectos) ================= */
 
 .seccion4 {
     background: linear-gradient(#004d80, #000000);
     flex-direction: column;
-    padding: 80px;
-    gap: 70px;
+    padding: 90px 90px;
+    gap: 70px; 
 }
 
 .proyecto-row {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 55px; 
 }
 
 .icono {
-    width: 130px;
-    height: 130px;
+    width: 170px;   
+    height: 170px;
     object-fit: contain;
 }
 
 .proyecto-texto h3 {
-    font-size: 36px;
-    border-bottom: 3px solid #86e3ff;
-    width: fit-content;
-    margin-bottom: 10px;
+    font-size: 40px;    
+    border-bottom: 0px solid #86e3ff;
+    margin-bottom: 1px;
 }
 
-.proyecto-texto p, a {
-    font-size: 22px;
-    color: white;
+.proyecto-texto p {
+    font-size: 24px;     
+    margin: 10px 0;
 }
 
-a {
+.proyecto-texto a {
+    font-size: 24px;
     color: #86e3ff;
 }
 
 .contacto {
-    font-size: 22px;
-    margin-top: 40px;
+    font-size: 26px;
+    margin-top: 20px;    
+    line-height: 1.4;      
+    text-align: left;      
+}
+
+.contacto a {
+    color: #86e3ff;
+    text-decoration: none;
 }
